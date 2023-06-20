@@ -10,6 +10,6 @@ Test Teardown   End Web Test
 
 *** Test Cases ***
 Go to Sony website
+    [Tags]      001     Sony
     go to       ${URL}
     wait until page contains element    //*[@id="tmpl-header"]/div[2]/div/h1/a/img
-    wait until page contains element    dummy
