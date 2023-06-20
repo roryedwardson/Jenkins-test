@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.3 on win32)" generated="20230620 13:25:21.740" rpa="false" schemaversion="4">
+<suite id="s1" name="Jenkinstest" source="C:\development\robot-scripts\Jenkins-test\tests\jenkinstest.robot">
+<test id="s1-t1" name="Go to Sony website" line="12">
+<kw name="Start Web Test" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230620 13:25:21.995" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230620 13:25:21.994" endtime="20230620 13:25:24.093"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230620 13:25:24.093" endtime="20230620 13:25:24.216"/>
+</kw>
+<status status="PASS" starttime="20230620 13:25:21.994" endtime="20230620 13:25:24.216"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230620 13:25:24.217" level="INFO">Opening url 'https://www.sony.com/en/'</msg>
+<status status="PASS" starttime="20230620 13:25:24.217" endtime="20230620 13:25:27.638"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="tmpl-header"]/div[2]/div/h1/a/img</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230620 13:25:27.639" endtime="20230620 13:25:27.653"/>
+</kw>
+<kw name="End Web Test" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230620 13:25:28.653" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230620 13:25:27.653" endtime="20230620 13:25:28.653"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230620 13:25:28.653" endtime="20230620 13:25:34.893"/>
+</kw>
+<status status="PASS" starttime="20230620 13:25:27.653" endtime="20230620 13:25:34.894"/>
+</kw>
+<status status="PASS" starttime="20230620 13:25:21.992" endtime="20230620 13:25:34.894"/>
+</test>
+<status status="PASS" starttime="20230620 13:25:21.742" endtime="20230620 13:25:34.898"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Jenkinstest">Jenkinstest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
